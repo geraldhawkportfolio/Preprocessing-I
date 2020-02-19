@@ -55,5 +55,65 @@ table {
 
 html, body {
     height: 100%;
+    max-width: 100%;
 }
 
+@fancyfont: 'Libre Baskerville', serif;
+
+@titlefont: 'Abel', sans-serif;
+
+@greyfont: 'grey';
+
+.fancyfont(){
+	font-family: @fancyfont;
+}
+
+.titlefont(){
+	font-family: @titlefont;
+}
+
+.greyfont(){
+	color: @greyfont;
+}
+
+.tile is-parent{
+	border-radius: 2px aquamarine solid !important;
+}
+
+.tile is-child notification is-light{
+border: 3px black groove;
+}
+
+article {
+	text-align: center;
+	border-radius: 2px aquamarine solid !important;
+}
+
+
+
+hr{
+ border: 2px black groove !important;
+}
+
+
+
+article {
+	.tile is-child notification is-primary{
+		.title{
+			.titlefont();
+		}
+
+		@media(max-width: 500px){
+			p {
+				color: black;
+			}
+		}
+
+		.subtitle{
+			.fancyfont();
+			.greyfont();
+
+
+		} // END SUBTITLE
+	} // END tile is-child notification is-primary
+} // article
